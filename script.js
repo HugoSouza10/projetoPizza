@@ -71,6 +71,23 @@ cs('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item)=>{
 });
 
 
+//Adicionando evento de click nos botões de + e - do modal
+
+c('.pizzaInfo--qtmenos').addEventListener('click', () =>{
+    if(modalQt>1){
+        c('.pizzaInfo--qt').innerHTML =   modalQt--;
+    }
+  
+
+});
+
+
+c('.pizzaInfo--qtmais').addEventListener('click', () =>{
+     c('.pizzaInfo--qt').innerHTML =   modalQt++;
+
+});
+
+
 
 
 
