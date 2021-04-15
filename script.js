@@ -1,5 +1,8 @@
 
 let modalQt = 1;
+let cart = [];
+let modalKey = 0;
+//Esse let cart é o carrinho
 const c = (el) => document.querySelector(el);
 const cs = (el) => document.querySelectorAll(el);
 
@@ -20,6 +23,8 @@ pizzaJson.map((item, index) =>{
         e.preventDefault();
         let key = e.target.closest('.pizza-item').getAttribute('data-key');
         modalQt = 1; //Serve para resetar o modal depois que fechar
+        modalKey = key;
+        //ModalKey serve para identificar qual é a pizza
 
         c('.pizzaBig img').src  = pizzaJson[key].img;
         c('.pizzaInfo h1').innerHTML = pizzaJson[key].name;
@@ -75,7 +80,8 @@ cs('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item)=>{
 
 c('.pizzaInfo--qtmenos').addEventListener('click', () =>{
     if(modalQt>1){
-        c('.pizzaInfo--qt').innerHTML =   modalQt--;
+        modalQt--;
+        c('.pizzaInfo--qt').innerHTML = modalQt;
     }
   
 
@@ -83,10 +89,40 @@ c('.pizzaInfo--qtmenos').addEventListener('click', () =>{
 
 
 c('.pizzaInfo--qtmais').addEventListener('click', () =>{
-     c('.pizzaInfo--qt').innerHTML =   modalQt++;
+     modalQt++;
+     c('.pizzaInfo--qt').innerHTML = modalQt;
+
+
+
 
 });
 
+
+//Adicionando evento de click no price
+
+cs('.pizzaInfo--size').forEach((size, sizeIndex) =>{
+        size.addEventListener('click', () =>{
+            c('.pizzaInfo--size.selected').classList.remove('selected');
+            size.classList.add('selected');
+        })
+
+});
+
+
+//Adicionando evento do carrinho
+
+c('.pizzaInfo--addButton').addEventListener('click', () =>{
+    let size =  parseInt(c('.pizzaInfo--sizes .selected').getAttribute('data-key'));
+
+    //Aqui agente definiu um objeto no array cart
+    cart.push({
+        id:pizzaJson[modalKey].id,
+        size: size,
+        qt:modalQt
+
+    });
+       
+})
 
 
 
@@ -112,3 +148,15 @@ c('.pizzaInfo--qtmais').addEventListener('click', () =>{
 //getAtributte: serve para pegar um atributo
 
 //Quando se seleciona via cs, então vira um node list, ou seja, um array
+
+//ParsetInt transforma em número inteiro
+
+
+
+/*
+
+ console.log('pizza selecionada'+modalKey);
+        let size =  c('.pizzaInfo--sizes .selected').getAttribute('data-key');
+        console.log(size);
+        console.log('Qt'+modalQt);
+ */
