@@ -114,15 +114,28 @@ cs('.pizzaInfo--size').forEach((size, sizeIndex) =>{
 c('.pizzaInfo--addButton').addEventListener('click', () =>{
     let size =  parseInt(c('.pizzaInfo--sizes .selected').getAttribute('data-key'));
 
-    //Aqui agente definiu um objeto no array cart
-    cart.push({
+    //Para o não criar a mesma pizza agente cria um id para aproveitar a mesma pizza que já foi adicionada
+
+    let idetifier = pizzaJson[modalKey].id+'@'+size;
+
+    let key = cart.findIndex((item) => item.idetifier == idetifier);
+    //Aqui ele me retorna 0 ou -1 se retornar -1 significa que não achou
+
+    if(key > -1){
+        cart[key].qt =+ modalQt;
+
+    }else{
+         //Aqui agente definiu um objeto no array cart
+        cart.push({
+        idetifier,
         id:pizzaJson[modalKey].id,
         size: size,
         qt:modalQt
-
-    });
+        });
        
-})
+    }
+     
+});
 
 
 
@@ -150,6 +163,8 @@ c('.pizzaInfo--addButton').addEventListener('click', () =>{
 //Quando se seleciona via cs, então vira um node list, ou seja, um array
 
 //ParsetInt transforma em número inteiro
+
+//findIndex: pesquisa um elemento que agente deseja procurar, então você pode colocar um item e pesquisar para ver se existe
 
 
 
