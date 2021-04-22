@@ -134,8 +134,97 @@ c('.pizzaInfo--addButton').addEventListener('click', () =>{
         });
        
     }
+    updateCart();
+    closseModal();
      
 });
+
+
+//Função atualizar carrinho
+
+/*função abrir menu mobile */
+c('.menu-openner').addEventListener('click', () =>{
+
+        if(cart.length >0){
+            c('aside').style.left = '0';
+        }
+       
+});
+
+c('aside .menu-closer').addEventListener('click', () =>{
+     c('aside').style.left = '100vw';
+})
+function updateCart() {
+
+    c('.menu-openner span').innerHTML = cart.length;
+
+    if(cart.length >0){
+        c('aside').classList.add('show');
+        c('.cart').innerHTML = '';
+
+        let subTotal = 0;
+        let desconto = 0;
+        let total = 0;
+
+        //Este for é usado para pegar cada item do array cart
+        for(let i in cart){
+            let pizzaItem = pizzaJson.find((item)=>item.id == cart[i].id);
+            let carItem = c('.models .cart--item').cloneNode(true);
+
+            subTotal += pizzaItem.price *cart[i].qt;
+
+            let pizzaSizeName;
+
+            switch(cart[i].size){
+                case 0:
+                    pizzaSizeName='P';
+                    break;
+
+                case 1:
+                    pizzaSizeName='M';
+                    break;   
+                    
+                case 2:
+                    pizzaSizeName='G';
+                    break;    
+            }
+
+            let pizzaName = `${pizzaItem.name} (${pizzaSizeName})`;
+            carItem.querySelector('img').src = pizzaItem.img;
+            carItem.querySelector('.cart--item-nome').innerHTML = pizzaName;
+            carItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
+            carItem.querySelector('.cart--item-qtmenos').addEventListener('click', () =>{
+                    if(cart[i].qt>1){
+                        cart[i].qt--;
+                       
+                    }else{
+                        cart.splice(i,1);
+                        //Aqui estou dizendo que vou remover um elemento do cart no caso o i somente 1 item
+                    }
+
+                    updateCart();
+            });
+
+            carItem.querySelector('.cart--item-qtmais').addEventListener('click', () =>{
+                    cart[i].qt++;
+                    updateCart();
+            });
+
+           c('.cart').append(carItem);
+               
+        }
+
+        desconto = subTotal*0.1;
+        total = subTotal-desconto;
+
+        c('.subtotal span:last-child').innerHTML = `R$: ${subTotal.toFixed(2)}`;
+        c('.desconto span:last-child').innerHTML = `R$: ${desconto.toFixed(2)}`;
+        c('.total span:last-child').innerHTML = `R$: ${total.toFixed(2)}`;
+    }else{
+        c('aside').classList.remove('show');
+        c('aside').style.left = '100vw';
+    }
+}
 
 
 
@@ -165,6 +254,13 @@ c('.pizzaInfo--addButton').addEventListener('click', () =>{
 //ParsetInt transforma em número inteiro
 
 //findIndex: pesquisa um elemento que agente deseja procurar, então você pode colocar um item e pesquisar para ver se existe
+//find: Retorna o valor dos itens específicos que agente quer, ele acha e retorna todos os itens dele
+
+// append:Pega um item específico e você pode fazer o que quiser com ele
+
+//splice(i,1); remove item do array essa função precisa do index e da quantidade de elementos que vai remover
+
+//last-child Pega o ultimo item
 
 
 
