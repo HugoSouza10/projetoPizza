@@ -20,6 +20,11 @@ O projeto pizza é na verdade um carrinho de pizza que foi desenvolvido com java
   </ul>
 
 
+## Responsivo
+
+![pizza_mobile](https://user-images.githubusercontent.com/51915862/135945522-227f73ad-bee3-4791-a18f-65d9e02a293d.png)
+
+
 
 
 🎯 **Objetivo:**  Bem, o objetivo do projeto é criar um carrinho de compra para armazenar todas as pizzas que o usuário escolher. Depois que o usuário escolheu o produto desejado, então é adicionado ao carrinho fazendo uma somas de todas ás pizzas com desconto de 10%.
