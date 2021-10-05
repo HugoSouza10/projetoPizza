@@ -1,4 +1,4 @@
-## h1>Projeto Pizza
+## Projeto Pizza
 
 /* ![img_projeto_pizza](https://user-images.githubusercontent.com/51915862/135942341-bec02987-3149-48e7-ab4a-fb8a8e57bda1.png) */
 
@@ -23,10 +23,10 @@ O projeto pizza é na verdade um carrinho de pizza que foi desenvolvido com java
 
 🎯 **Objetivo:**  Bem, o objetivo do projeto é criar um carrinho de compra para armazenar todas as pizzas que o usuário escolher. Depois que o usuário escolheu o produto desejado, então é adicionado ao carrinho fazendo uma somas de todas ás pizzas com desconto de 10%.
 
-## 📚**Bibliotecas:</h2>**
+## 📚**Bibliotecas:**
 
 Este projeto não tem nenhuma biblioteca, foi tudo criado com a linguagem pura mesma.
 
-**<h2>Status do projeto:</h2>**
+**##Status do projeto:**
 
 Projeto 100% concluído inclusive está hospedado no git page para teste.
