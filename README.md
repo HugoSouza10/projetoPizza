@@ -1,6 +1,7 @@
 ## Projeto Pizza
 
-![carrinho de pizza gif](https://user-images.githubusercontent.com/51915862/135943009-bb6232a2-9770-4520-9404-ff852df9c9cc.gif)
+![img_projeto_pizza](https://user-images.githubusercontent.com/51915862/135942341-bec02987-3149-48e7-ab4a-fb8a8e57bda1.png)
+
 
 
 ## ✍️**Descrição: **
