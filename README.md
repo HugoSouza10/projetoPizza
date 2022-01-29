@@ -6,7 +6,7 @@
 
 ## ✍️**Descrição: **
 
-O projeto pizza é na verdade um carrinho de pizza que foi desenvolvido com java script puro. O projeto consiste em listar todas pizzas que vem direto de um array de pizza com o objetivo do usuário escolher a pizza desejada e inseri-la no carrinho. Este projeto criei com intuito de mostrar minhas habilidades com java script.
+O projeto pizza é na verdade um carrinho de pizza que foi desenvolvido com java script puro. O projeto consiste em listar todas as pizzas que vem direto de um array de pizza, com o objetivo do usuário escolher a pizza desejada e inseri-la no carrinho. Este projeto criei com intuito de mostrar minhas habilidades com java script.
 
 **## Link do projeto:
    https://hugosouza10.github.io/projetoPizza/
