@@ -1,38 +1,52 @@
-## Projeto Pizza
+
+
+# Carrinho de Compras de Pizzas 🍕
 
 ![img_projeto_pizza](https://user-images.githubusercontent.com/51915862/135942341-bec02987-3149-48e7-ab4a-fb8a8e57bda1.png)
 
+## Descrição
 
+Bem-vindo ao Carrinho de Compras de Pizzas! Este projeto, desenvolvido em HTML, CSS e JavaScript, oferece uma experiência interativa e saborosa de compra de pizzas. O sistema é baseado em um array contendo uma lista deliciosa de pizzas, que são renderizadas dinamicamente na tela em formato de cards. Cada card exibe a imagem apetitosa da pizza, uma descrição atraente e um botão "+", que permite adicionar a pizza ao carrinho.
 
-## ✍️**Descrição: **
+## Funcionalidades
 
-O projeto pizza é na verdade um carrinho de pizza que foi desenvolvido com java script puro. O projeto consiste em listar todas as pizzas que vem direto de um array de pizza, com o objetivo do usuário escolher a pizza desejada e inseri-la no carrinho. Este projeto criei com intuito de mostrar minhas habilidades com java script.
+- **Renderização Dinâmica de Pizzas:** A lista de pizzas é renderizada dinamicamente, proporcionando uma experiência visual atraente.
+- **Modal Interativo:** Ao clicar no botão "+", um modal é exibido com detalhes da pizza, como descrição, imagem, quantidade e opções de tamanho.
+- **Adição ao Carrinho:** O usuário pode escolher o tamanho desejado e a quantidade da pizza no modal, adicionando-a ao carrinho.
 
-**## Link do projeto:
-   https://hugosouza10.github.io/projetoPizza/
+## Como Usar
 
-## 💻  **Tecnologias:**
+1. Abra o projeto em seu navegador.
+2. Explore a variedade de pizzas disponíveis.
+3. Clique no botão "+" para adicionar uma pizza ao carrinho.
+4. No modal, escolha o tamanho desejado e a quantidade.
+5. Confirme a adição e veja a pizza no carrinho.
 
-  <ul>
-    <li>HTML5</li>
-    <li>CSS3</li>
-     <li>JS</li>
-  </ul>
+## Estrutura de Diretórios
 
+- `css/`: Contém os estilos CSS do projeto.
+- `js/`: Contém os scripts JavaScript responsáveis pela lógica do carrinho.
+- `index.html`: Arquivo principal contendo a estrutura HTML do carrinho.
 
 ## Responsivo
 
 ![pizza_mobile](https://user-images.githubusercontent.com/51915862/135945522-227f73ad-bee3-4791-a18f-65d9e02a293d.png)
 
 
+## Contribuições
 
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests para melhorias ou novas funcionalidades.
 
-🎯 **Objetivo:**  Bem, o objetivo do projeto é criar um carrinho de compra para armazenar todas as pizzas que o usuário escolher. Depois que o usuário escolheu o produto desejado, então é adicionado ao carrinho fazendo uma somas de todas ás pizzas com desconto de 10%.
+## Tecnologias Utilizadas
 
-## 📚**Bibliotecas:**
+- HTML
+- CSS
+- JavaScript
 
-Este projeto não tem nenhuma biblioteca, foi tudo criado com a linguagem pura mesma.
+## Status do Projeto
 
-**##Status do projeto:**
+O projeto está funcional e proporciona uma experiência de compra intuitiva. Há oportunidades para melhorias contínuas e expansão das funcionalidades.
 
-Projeto 100% concluído inclusive está hospedado no git page para teste.
+## Licença
+
+Este projeto está licenciado sob a [Sua Licença](URL_DA_LICENCA).
